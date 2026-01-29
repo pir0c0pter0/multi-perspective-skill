@@ -1,0 +1,49 @@
+# Multi-Perspective Skill Configuration
+version: "1.1.0"
+
+execution:
+  timeout_seconds: 90
+  quorum_minimum: 3
+  max_agents: 5
+
+rate_limiting:
+  enabled: true
+  max_per_hour: 10
+
+security:
+  max_input_length: 10000
+  sanitize_input: true
+  reject_injection_patterns:
+    - "ignore.*instructions"
+    - "ignore.*previous"
+    - "disregard.*above"
+    - "you are now"
+    - "new instructions"
+    - "system:"
+
+models:
+  agents: "sonnet"
+  synthesis: "opus"
+
+feedback:
+  show_progress: true
+  show_timing: true
+
+modes:
+  quick:
+    description: "3 agentes essenciais para respostas rápidas"
+    agents: ["architect", "security", "creative"]
+    timeout_seconds: 60
+    synthesis_model: "sonnet"
+
+  balanced:
+    description: "5 agentes padrão (default)"
+    agents: ["architect", "planner", "security", "code-quality", "creative"]
+    timeout_seconds: 90
+    synthesis_model: "opus"
+
+  comprehensive:
+    description: "Análise profunda com mais tempo"
+    agents: ["architect", "planner", "security", "code-quality", "creative"]
+    timeout_seconds: 120
+    synthesis_model: "opus"
