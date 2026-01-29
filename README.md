@@ -20,6 +20,10 @@
   <a href="#-configuração">Configuração</a>
 </p>
 
+<p align="center">
+  <a href="README.md">🇧🇷 Português</a> | <a href="README_EN.md">🇺🇸 English</a>
+</p>
+
 ---
 
 ## 🌟 Funcionalidades
@@ -308,7 +312,8 @@ models:
 multi-perspective/
 ├── 📄 SKILL.md                    # Definição principal do skill
 ├── 📄 LICENSE                     # Licença MIT
-├── 📄 README.md                   # Este arquivo
+├── 📄 README.md                   # Documentação em Português
+├── 📄 README_EN.md                # Documentação em Inglês
 │
 ├── 📁 config/
 │   └── settings.yaml              # Configurações
