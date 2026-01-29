@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.1.0-blue?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/versão-1.1.0-blue?style=for-the-badge" alt="Versão">
+  <img src="https://img.shields.io/badge/licença-MIT-green?style=for-the-badge" alt="Licença">
   <img src="https://img.shields.io/badge/claude-code-purple?style=for-the-badge" alt="Claude Code">
-  <img src="https://img.shields.io/badge/agents-5-orange?style=for-the-badge" alt="Agents">
+  <img src="https://img.shields.io/badge/agentes-5-orange?style=for-the-badge" alt="Agentes">
 </p>
 
 <h1 align="center">🎯 Multi-Perspective Analysis</h1>
@@ -12,36 +12,36 @@
 </p>
 
 <p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-how-it-works">How It Works</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-examples">Examples</a> •
-  <a href="#-configuration">Configuration</a>
+  <a href="#-funcionalidades">Funcionalidades</a> •
+  <a href="#-início-rápido">Início Rápido</a> •
+  <a href="#-como-funciona">Como Funciona</a> •
+  <a href="#-uso">Uso</a> •
+  <a href="#-exemplos">Exemplos</a> •
+  <a href="#-configuração">Configuração</a>
 </p>
 
 ---
 
-## 🌟 Features
+## 🌟 Funcionalidades
 
-| Feature | Description |
-|---------|-------------|
-| 🚀 **Parallel Execution** | 5 agentes executam simultaneamente para máxima velocidade |
-| 🧠 **5 Perspectives** | Architect, Planner, Security, Code Quality, Creative |
-| 🔄 **Smart Synthesis** | Agente revisor (Opus) combina insights em solução ótima |
-| 🛡️ **Fault Tolerant** | Quorum 3/5 - continua mesmo se agentes falharem |
-| 📊 **Progress Tracking** | Feedback visual em tempo real |
-| ⚡ **3 Modes** | Quick (3 agentes), Balanced (5), Comprehensive (5+tempo) |
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| 🚀 **Execução Paralela** | 5 agentes executam simultaneamente para máxima velocidade |
+| 🧠 **5 Perspectivas** | Architect, Planner, Security, Code Quality, Creative |
+| 🔄 **Síntese Inteligente** | Agente revisor (Opus) combina insights em solução ótima |
+| 🛡️ **Tolerante a Falhas** | Quorum 3/5 - continua mesmo se agentes falharem |
+| 📊 **Acompanhamento em Tempo Real** | Feedback visual do progresso |
+| ⚡ **3 Modos** | Quick (3 agentes), Balanced (5), Comprehensive (5+tempo) |
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
 ### Instalação
 
 ```bash
 # Clone o repositório
-git clone https://github.com/mariostjr/multi-perspective-skill.git
+git clone https://github.com/pir0c0pter0/multi-perspective-skill.git
 
 # Copie para o diretório de skills do Claude Code
 cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
@@ -56,24 +56,24 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ---
 
-## 🔄 How It Works
+## 🔄 Como Funciona
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         MULTI-PERSPECTIVE FLOW                          │
+│                      FLUXO DO MULTI-PERSPECTIVE                         │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│   📝 User Request                                                       │
+│   📝 Requisição do Usuário                                              │
 │         │                                                               │
 │         ▼                                                               │
 │   ┌─────────────┐                                                       │
-│   │  Validate   │ ─── Input > 10k chars? ──▶ ❌ Reject                  │
-│   │   Input     │ ─── Injection pattern? ──▶ ⚠️  Sanitize               │
+│   │  Validar    │ ─── Input > 10k chars? ──▶ ❌ Rejeitar                │
+│   │   Input     │ ─── Padrão de injeção? ──▶ ⚠️  Sanitizar              │
 │   └─────────────┘                                                       │
 │         │                                                               │
 │         ▼                                                               │
 │   ┌─────────────────────────────────────────────────────────┐          │
-│   │              PARALLEL EXECUTION (5 Agents)               │          │
+│   │            EXECUÇÃO PARALELA (5 Agentes)                 │          │
 │   ├─────────────────────────────────────────────────────────┤          │
 │   │                                                         │          │
 │   │  🏛️ Architect    🗺️ Planner    🔒 Security              │          │
@@ -86,28 +86,28 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 │         │                                                               │
 │         ▼                                                               │
 │   ┌─────────────┐                                                       │
-│   │   Quorum    │ ─── < 3 agents? ──▶ 📋 Degraded Mode                 │
-│   │   Check     │                                                       │
+│   │  Verificar  │ ─── < 3 agentes? ──▶ 📋 Modo Degradado               │
+│   │   Quorum    │                                                       │
 │   └─────────────┘                                                       │
 │         │                                                               │
 │         ▼                                                               │
 │   ┌─────────────────────────────────────────────────────────┐          │
-│   │              SYNTHESIS (Opus Model)                      │          │
+│   │               SÍNTESE (Modelo Opus)                      │          │
 │   ├─────────────────────────────────────────────────────────┤          │
-│   │  • Consensus Points     • Conflict Resolution           │          │
-│   │  • Final Recommendation • Confidence Level              │          │
-│   │  • Dissenting Opinions                                  │          │
+│   │  • Pontos de Consenso    • Resolução de Conflitos       │          │
+│   │  • Recomendação Final    • Nível de Confiança           │          │
+│   │  • Opiniões Divergentes                                 │          │
 │   └─────────────────────────────────────────────────────────┘          │
 │         │                                                               │
 │         ▼                                                               │
-│   📊 Final Result                                                       │
+│   📊 Resultado Final                                                    │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📖 Usage
+## 📖 Uso
 
 ### Sintaxe
 
@@ -117,10 +117,10 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ### Modos de Execução
 
-| Mode | Agents | Timeout | Synthesis | Use Case |
-|:----:|:------:|:-------:|:---------:|:---------|
+| Modo | Agentes | Timeout | Síntese | Caso de Uso |
+|:----:|:-------:|:-------:|:-------:|:------------|
 | 🟢 `quick` | 3 | 60s | Sonnet | Perguntas simples, respostas rápidas |
-| 🟡 `balanced` | 5 | 90s | Opus | **Default** - Análise completa |
+| 🟡 `balanced` | 5 | 90s | Opus | **Padrão** - Análise completa |
 | 🔴 `comprehensive` | 5 | 120s | Opus | Decisões críticas, análise profunda |
 
 ### Exemplos de Comando
@@ -138,7 +138,7 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ---
 
-## 🎭 The 5 Agents
+## 🎭 Os 5 Agentes
 
 <table>
 <tr>
@@ -146,7 +146,7 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ### 🏛️ Architect
 
-**System Design**
+**Design de Sistema**
 
 </td>
 <td>
@@ -163,7 +163,7 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ### 🗺️ Planner
 
-**Implementation Strategy**
+**Estratégia de Implementação**
 
 </td>
 <td>
@@ -180,7 +180,7 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ### 🔒 Security
 
-**Vulnerability Analysis**
+**Análise de Vulnerabilidades**
 
 </td>
 <td>
@@ -197,14 +197,14 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ### ✨ Code Quality
 
-**Best Practices**
+**Boas Práticas**
 
 </td>
 <td>
 
-- SOLID principles
-- Clean Code patterns
-- Testing strategies
+- Princípios SOLID
+- Padrões de Clean Code
+- Estratégias de testes
 - Manutenibilidade
 
 </td>
@@ -214,7 +214,7 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ### 💡 Creative
 
-**Alternative Thinking**
+**Pensamento Alternativo**
 
 </td>
 <td>
@@ -230,27 +230,27 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ---
 
-## 📊 Output Format
+## 📊 Formato de Saída
 
 ```markdown
-## Multi-Perspective Analysis Result
+## Resultado da Análise Multi-Perspective
 
-**Confidence:** 🟢 HIGH | 🟡 MEDIUM | 🔴 LOW
+**Confiança:** 🟢 ALTA | 🟡 MÉDIA | 🔴 BAIXA
 
-### Summary
-[Overview de 1-2 parágrafos]
+### Resumo
+[Visão geral de 1-2 parágrafos]
 
-### Final Recommendation
+### Recomendação Final
 [Lista priorizada de ações]
 
-### Key Insights by Perspective
+### Insights Principais por Perspectiva
 - **🏛️ Architect:** [insight principal]
 - **🗺️ Planner:** [insight principal]
 - **🔒 Security:** [insight principal]
 - **✨ Code Quality:** [insight principal]
 - **💡 Creative:** [insight principal]
 
-### Dissenting Opinions
+### Opiniões Divergentes
 [Opiniões minoritárias valiosas]
 
 ---
@@ -259,7 +259,7 @@ cp -r multi-perspective-skill ~/.claude/skills/skills/multi-perspective
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Configuração
 
 ### Arquivo: `config/settings.yaml`
 
@@ -288,94 +288,94 @@ models:
 
 ---
 
-## 🛡️ Error Handling
+## 🛡️ Tratamento de Erros
 
-| Scenario | Action | Result |
-|:---------|:-------|:-------|
-| ⚠️ Input > 10k chars | Reject | Error message |
-| ⚠️ Injection detected | Sanitize | Warning + proceed |
-| ❌ 1 agent fails | Continue | Note in synthesis |
-| ❌ 2 agents fail | Continue | Warning shown |
-| ❌ 3+ agents fail | Degraded | Individual results |
-| ❌ Synthesis fails | Fallback | Individual results |
-| ⏱️ Timeout (90s) | Mark failed | Continue with others |
+| Cenário | Ação | Resultado |
+|:--------|:-----|:----------|
+| ⚠️ Input > 10k caracteres | Rejeitar | Mensagem de erro |
+| ⚠️ Injeção detectada | Sanitizar | Aviso + continuar |
+| ❌ 1 agente falha | Continuar | Nota na síntese |
+| ❌ 2 agentes falham | Continuar | Aviso exibido |
+| ❌ 3+ agentes falham | Degradado | Resultados individuais |
+| ❌ Síntese falha | Fallback | Resultados individuais |
+| ⏱️ Timeout (90s) | Marcar como falha | Continuar com os outros |
 
 ---
 
-## 📁 Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 multi-perspective/
-├── 📄 SKILL.md                    # Main skill definition
-├── 📄 LICENSE                     # MIT License
-├── 📄 README.md                   # This file
+├── 📄 SKILL.md                    # Definição principal do skill
+├── 📄 LICENSE                     # Licença MIT
+├── 📄 README.md                   # Este arquivo
 │
 ├── 📁 config/
-│   └── settings.yaml              # Configuration
+│   └── settings.yaml              # Configurações
 │
 ├── 📁 templates/
 │   ├── 📁 agent-prompts/
-│   │   ├── architect.md           # 🏛️ Architect prompt
-│   │   ├── planner.md             # 🗺️ Planner prompt
-│   │   ├── security.md            # 🔒 Security prompt
-│   │   ├── code-quality.md        # ✨ Code Quality prompt
-│   │   └── creative.md            # 💡 Creative prompt
-│   └── synthesis-prompt.md        # Synthesis template
+│   │   ├── architect.md           # 🏛️ Prompt do Architect
+│   │   ├── planner.md             # 🗺️ Prompt do Planner
+│   │   ├── security.md            # 🔒 Prompt do Security
+│   │   ├── code-quality.md        # ✨ Prompt do Code Quality
+│   │   └── creative.md            # 💡 Prompt do Creative
+│   └── synthesis-prompt.md        # Template de síntese
 │
 ├── 📁 docs/
-│   ├── MANUAL.md                  # Detailed manual
-│   ├── EXAMPLES.md                # Usage examples
-│   └── example-execution.md       # Full execution trace
+│   ├── MANUAL.md                  # Manual detalhado
+│   ├── EXAMPLES.md                # Exemplos de uso
+│   └── example-execution.md       # Trace completo de execução
 │
 └── 📁 scripts/
-    └── validate.sh                # Structure validator
+    └── validate.sh                # Validador de estrutura
 ```
 
 ---
 
-## 📈 Cost Estimation
+## 📈 Estimativa de Custos
 
-| Operation | Tokens | Model | Cost (USD) |
-|:----------|:------:|:-----:|:----------:|
-| 5 Agents (input) | ~10,000 | Sonnet | $0.03 |
-| 5 Agents (output) | ~10,000 | Sonnet | $0.15 |
-| Synthesis (input) | ~15,000 | Opus | $0.23 |
-| Synthesis (output) | ~3,000 | Opus | $0.23 |
-| **Total per execution** | | | **~$0.64** |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+| Operação | Tokens | Modelo | Custo (USD) |
+|:---------|:------:|:------:|:-----------:|
+| 5 Agentes (input) | ~10.000 | Sonnet | $0,03 |
+| 5 Agentes (output) | ~10.000 | Sonnet | $0,15 |
+| Síntese (input) | ~15.000 | Opus | $0,23 |
+| Síntese (output) | ~3.000 | Opus | $0,23 |
+| **Total por execução** | | | **~$0,64** |
 
 ---
 
-## 📜 License
+## 🤝 Contribuindo
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
+
+1. Faça um fork do repositório
+2. Crie sua branch de feature (`git checkout -b feature/feature-incrivel`)
+3. Commit suas mudanças (`git commit -m 'feat: adiciona feature incrível'`)
+4. Push para a branch (`git push origin feature/feature-incrivel`)
+5. Abra um Pull Request
 
 ---
 
-## 🙏 Acknowledgments
+## 📜 Licença
 
-- Built for [Claude Code](https://claude.ai/claude-code) CLI
-- Powered by Claude Sonnet 4.5 and Opus 4.5
-- Inspired by ensemble learning and multi-agent systems
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+
+## 🙏 Agradecimentos
+
+- Construído para o CLI [Claude Code](https://claude.ai/claude-code)
+- Powered by Claude Sonnet 4.5 e Opus 4.5
+- Inspirado em ensemble learning e sistemas multi-agentes
 
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/mariostjr">Mario St Jr</a>
+  Feito com ❤️ por <a href="https://github.com/pir0c0pter0">Mario St Jr</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/mariostjr/multi-perspective-skill/issues">Report Bug</a> •
-  <a href="https://github.com/mariostjr/multi-perspective-skill/issues">Request Feature</a>
+  <a href="https://github.com/pir0c0pter0/multi-perspective-skill/issues">Reportar Bug</a> •
+  <a href="https://github.com/pir0c0pter0/multi-perspective-skill/issues">Solicitar Feature</a>
 </p>
