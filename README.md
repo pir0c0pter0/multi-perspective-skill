@@ -377,7 +377,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ---
 
 <p align="center">
-  Feito com ❤️ por <a href="https://github.com/pir0c0pter0">Mario St Jr</a>
+  Feito com ❤️ por <a href="https://github.com/pir0c0pter0">Mario St Jr</a> (pir0c0pter0000@gmail.com)
 </p>
 
 <p align="center">
